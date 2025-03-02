@@ -1,3 +1,4 @@
+# commented out lines kept as a reminder of the steps took to build this first project
 from stats import *
 import sys
 
@@ -20,9 +21,9 @@ def main():
     bookpath = sys.argv[1]
     book_string = get_book_text(bookpath)
     num_words = words_count(book_string)
-    print(f"{num_words} words found in the document")
+    #print(f"{num_words} words found in the document")
     characters = character_times(book_string)
-    print(characters)
+    #print(characters)
     report = sorted_list(characters)
     #print(report)
     print("============ BOOKBOT ============")
