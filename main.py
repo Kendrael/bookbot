@@ -1,4 +1,5 @@
 from stats import *
+import sys
 
 def get_book_text(path):
     try:
@@ -13,7 +14,10 @@ def get_book_text(path):
         return ""
     
 def main():
-    bookpath = "books/frankenstein.txt"
+    if len(sys.argv) != 2:
+        print("You also need to specify the path to the book, ex: python 3 main.py books/frankenstein.txt")
+        sys.exit(1)
+    bookpath = sys.argv[1]
     book_string = get_book_text(bookpath)
     num_words = words_count(book_string)
     print(f"{num_words} words found in the document")
